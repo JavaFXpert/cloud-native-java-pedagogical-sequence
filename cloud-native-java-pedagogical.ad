@@ -262,6 +262,9 @@ Iterable<T> findAll(Iterable<Long> ids, Sort sort, int depth);
 Page<T> findAll(Pageable pageable, int depth);
 ----
 
+==== Spring Data reference
+For definitive reference information on Spring Data, see http://docs.spring.io/spring-data/commons/docs/current/reference/html/[Spring Data Commons - Reference Documentation]
+
 === Commonly used Annotations specific to Spring Boot apps
 
 * http://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/SpringBootApplication.html[@SpringBootApplication] TODO: Describe
