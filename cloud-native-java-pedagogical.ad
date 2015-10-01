@@ -1,0 +1,10 @@
+= Cloud-Native Java Pedagogical Sequence
+outline that expresses a pedagogical sequence for Cloud-Native Java, including Spring Boot and Spring Cloud
+
+== Spring foundational concepts
+=== Dependency injection
+== Spring Boot
+=== Spring Initializer start.spring.io
+=== Groovy cripting
+== Spring Cloud
+== Cloud Foundry
