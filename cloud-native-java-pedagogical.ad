@@ -56,7 +56,7 @@ Common artifacts from the parent's build system may be inherited.  For example, 
 </parent>
 ----
 
-Much of the file consists of dependencies, many of them corresponding to the choices made in the *Project dependencies* portion of the *Spring Initializer* page.
+Much of the file consists of dependencies, many of them corresponding to the choices made in the *Project dependencies* portion of the *Spring Initializer* page.  Dependencies specified cause external libraries to be included in the project.  Some dependencies, particular ones that contain the word *starter*, cause other dependencies to be loaded in a cascading fashion.
 
 [source,xml]
 .*<dependencies>* section of example pom.xml file
