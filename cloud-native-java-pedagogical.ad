@@ -2,7 +2,7 @@
 
 Outline that expresses a pedagogical sequence for Cloud-Native Java, including Spring Boot and Spring Cloud.
 
-NOTE: Although there is a lot of detail in the beginning sections, most of this document should list concepts with applicable links in a logical teaching progression.
+NOTE: Although there is a lot of detail in the beginning sections, most of this document should list *concepts* with applicable links in a logical teaching progression.  Unlike usual technical documentation, avoid use of gerunds in titles to avoid the tendency to describe *processes*.
 
 == Spring foundational concepts
 === Dependency injection
@@ -149,11 +149,14 @@ Much of the file consists of dependencies, many of them corresponding to the cho
 ----
 
 === Spring Data JPA
-==== Defining an Entity
-==== Interfacing with a database
+==== Define an Entity
+==== Interface with a database
 ==== Commonly used Annotations specific to Spring Data JPA
 
 * http://docs.spring.io/spring-data/jpa/docs/current/reference/html/[@Entity] A Spring Data JPA annotation that TODO: Describe
+
+* *@Id:* TODO: Provide link or describe
+* *@GeneratedValue:* TODO: Provide link or describe
 
 === Commonly used Annotations specific to Spring Boot apps
 
