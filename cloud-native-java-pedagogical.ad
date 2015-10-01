@@ -6,6 +6,10 @@ NOTE: Although there is a lot of detail in the beginning sections, most of this 
 
 == Spring foundational concepts
 === Dependency injection
+TODO: Fill out this section
+
+For definitive reference information on Spring dependency injection, see http://docs.spring.io/spring-framework/docs/current/spring-framework-reference/html/beans.html[The IoC Container]
+
 == Spring Boot and related dependencies (e.g. Spring Data JPA)
 === Groovy scripting a REST service
 [source,groovy]
