@@ -2,7 +2,7 @@
 
 Outline that expresses a pedagogical sequence for Cloud-Native Java, including Spring Boot and Spring Cloud.
 
-NOTE: Although there is a lot of detail in the beginning sections, most of this document should list *concepts* with applicable links in a logical teaching progression.  Unlike usual technical documentation, avoid use of gerunds in titles to avoid the tendency to describe *processes*.
+NOTE: Although there is a lot of detail in the beginning sections, most of this document should list *concepts* with applicable links in a logical teaching progression.  Unlike usual technical documentation, avoid use of gerunds in titles to avoid the tendency to describe *procedures*.
 
 == Spring foundational concepts
 === Dependency injection
