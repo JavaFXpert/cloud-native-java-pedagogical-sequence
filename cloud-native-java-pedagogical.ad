@@ -1,9 +1,11 @@
 = Cloud-Native Java Pedagogical Sequence
-outline that expresses a pedagogical sequence for Cloud-Native Java, including Spring Boot and Spring Cloud
+Outline that expresses a pedagogical sequence for Cloud-Native Java, including Spring Boot and Spring Cloud.
+
+NOTE: Although there is a lot of detail in the beginning sections, most of this document should list concepts with applicable links in a logical teaching progression.
 
 == Spring foundational concepts
 === Dependency injection
-== Spring Boot
+== Spring Boot and related dependencies (e.g. Spring Data JPA)
 === Groovy scripting a REST service
 [source,groovy]
 .example: hi.groovy
@@ -145,13 +147,16 @@ Much of the file consists of dependencies, many of them corresponding to the cho
 </dependencies>
 ----
 
-=== Spring Data
-=== Annotations commonly used in Spring Boot apps (TODO: perhaps distribute these in proper sections, removing this section)
-Here are some annotations commonly used in Spring Boot apps, along with reasons for being used:
-
-* http://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/SpringBootApplication.html[@SpringBootApplication] TODO: Describe
+=== Spring Data JPA
+==== Defining an Entity
+==== Interfacing with a database
+==== Commonly used Annotations specific to Spring Data JPA
 
 * http://docs.spring.io/spring-data/jpa/docs/current/reference/html/[@Entity] A Spring Data JPA annotation that TODO: Describe
+
+=== Commonly used Annotations specific to Spring Boot apps
+
+* http://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/SpringBootApplication.html[@SpringBootApplication] TODO: Describe
 
 == Spring Cloud
 == Cloud Foundry
