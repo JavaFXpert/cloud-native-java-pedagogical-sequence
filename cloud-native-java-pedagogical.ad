@@ -22,6 +22,25 @@ class GreetingsRestController {
 ----
 > spring run hi.groovy
 ----
+.Invoking example REST service in browser
+----
+localhost:8080/hi/World
+----
+.JSON returned from REST service
+----
+{
+  greeting: "Hi,World!"
+}
+----
+.Creating an executable JAR from example
+----
+> spring jar hi.jar hi.groovy
+----
+.Running the example executable JAR
+----
+> java -jar hi.jar
+----
+The REST web service code above is short enough to be tweeted!
 
 == Spring Cloud
 == Cloud Foundry
