@@ -6,5 +6,18 @@ outline that expresses a pedagogical sequence for Cloud-Native Java, including S
 == Spring Boot
 === Spring Initializer start.spring.io
 === Groovy scripting a REST service
+[[app-listing]]
+[source,groovy]
+.example: hi.groovy
+----
+@RestController
+class GreetingsRestController {
+  @RequestMapping("/hi/{name}")
+  def hi(@PathVariable String name) {
+    [ greeting : "Hi," + name + "!"]
+  }
+}
+----
+
 == Spring Cloud
 == Cloud Foundry
