@@ -18,6 +18,10 @@ class GreetingsRestController {
   }
 }
 ----
+.Running example from command line
+----
+> spring run hi.groovy
+----
 
 == Spring Cloud
 == Cloud Foundry
