@@ -220,6 +220,17 @@ void delete(Iterable<? extends T> var1);
 void deleteAll();
 ----
 
+==== Automatic object creation that implements data access interfaces
+==== Custom finder methods
+[source,java]
+.Example of creating a custom finder method:
+----
+interface ReservationRepository extends JpaRepository<Reservation, Long> {
+  // select * from reservations where reservation_name = :rn
+  Collection<Reservation> findByReservationName (String rn);
+}
+----
+
 ==== Commonly used Annotations specific to Spring Data JPA
 
 * http://docs.spring.io/spring-data/jpa/docs/current/reference/html/[@Entity] A Spring Data JPA annotation that TODO: Describe
@@ -234,6 +245,20 @@ Examples include:
 * http://projects.spring.io/spring-data-rest/[Spring Data REST]
 * http://projects.spring.io/spring-data-cassandra/[Spring Data Cassandra]
 * http://projects.spring.io/spring-data-neo4j/[Spring Data Neo4J]
+* http://projects.spring.io/spring-data-couchbase/[Spring Data Couchbase]
+* http://projects.spring.io/spring-data-redis/[Spring Data Redis]
+
+NOTE: Spring Data projects differ in capabilities.  For example, Spring Data Neo4J contains a `GraphRepository` interface that includes methods for finding objects at given depths:
+
+[source,java]
+.Methods in `GraphRepository` for finding objects at given depths:
+----
+Iterable<T> findAll(int depth);
+Iterable<T> findAll(Sort sort, int depth);
+Iterable<T> findAll(Iterable<Long> ids, int depth);
+Iterable<T> findAll(Iterable<Long> ids, Sort sort, int depth);
+Page<T> findAll(Pageable pageable, int depth);
+----
 
 === Commonly used Annotations specific to Spring Boot apps
 
