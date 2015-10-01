@@ -145,7 +145,8 @@ Much of the file consists of dependencies, many of them corresponding to the cho
 </dependencies>
 ----
 
-=== Annotations commonly used in Spring Boot apps
+=== Spring Data
+=== Annotations commonly used in Spring Boot apps (TODO: perhaps distribute these in proper sections, removing this section)
 Here are some annotations commonly used in Spring Boot apps, along with reasons for being used:
 
 * http://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/SpringBootApplication.html[@SpringBootApplication] TODO: Describe
