@@ -5,15 +5,111 @@ outline that expresses a pedagogical sequence for Cloud-Native Java, including S
 === Dependency injection
 == Spring Boot
 === Spring Initializer start.spring.io
-Some typical choices Project metadata section:
+Some typical choices *Project metadata* section:
 
 * *Type:* Maven Project
 * *Packaging:* Jar
 
 TIP: Your choice in *Spring Boot Version* reveals (on the right side of the page) the available features for that version.
 
+Some example choices *Project dependencies* section:
+
+* *Thymeleaf:* TODO: Describe
+* *Web:* TODO: Describe
+* *Vaadin:* Component-based Web UIs
+* *Rest Repositories:* Convention over configuration-based APIs based on your data access layer
+* *Rest Repositories HAL Browser:* To give information about the Rest repositories
+* *JPA:* Object-Relational Mapping
+* *H2:* In-memory embedded database that isn't persistent between app restarts
+* *Actuator:* TODO: Describe
+* *Remote Shell:* TODO: Describe
+
+Clicking *Generate Project* creates and downloads a ZIP file that can be expanded and opened in an IDE such as Intellij and Eclipse.  The ZIP file contains project-related files and a skeletal directory structure with source code for a minimal project.  If Maven Project was chosen in the *Project metadata* section, a pom.xml file is generated that contains information about the build such as type of build, name, description, and project dependencies.
+
+[source,xml]
+.Top section of example pom.xml file
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.test</groupId>
+	<artifactId>demo</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>demo</name>
+	<description>Demo project for Spring Boot</description>
+----
+
+Common artifacts from the parent's build system may be inherited.  For example, TODO: Explain.
+
+[source,xml]
+.*<parent>* section of example pom.xml file
+----
+<parent>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-parent</artifactId>
+  <version>1.3.0.M5</version>
+  <relativePath/> <!-- lookup parent from repository -->
+</parent>
+----
+
+Much of the file consists of dependencies, many of them corresponding to the choices made in the *Project dependencies* portion of the *Spring Initializer* page.
+
+[source,xml]
+.*<dependencies>* section of example pom.xml file
+----
+<dependencies>
+  <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-actuator</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-data-jpa</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-data-rest</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.springframework.data</groupId>
+    <artifactId>spring-data-rest-hal-browser</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-remote-shell</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-thymeleaf</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>com.vaadin</groupId>
+    <artifactId>vaadin-spring-boot-starter</artifactId>
+    <version>1.0.0</version>
+  </dependency>
+  <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-web</artifactId>
+  </dependency>
+
+  <dependency>
+    <groupId>com.h2database</groupId>
+    <artifactId>h2</artifactId>
+    <scope>runtime</scope>
+  </dependency>
+  <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-test</artifactId>
+    <scope>test</scope>
+  </dependency>
+</dependencies>
+----
+
 === Groovy scripting a REST service
-[[app-listing]]
 [source,groovy]
 .example: hi.groovy
 ----
