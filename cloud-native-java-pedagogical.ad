@@ -5,6 +5,6 @@ outline that expresses a pedagogical sequence for Cloud-Native Java, including S
 === Dependency injection
 == Spring Boot
 === Spring Initializer start.spring.io
-=== Groovy cripting
+=== Groovy scripting
 == Spring Cloud
 == Cloud Foundry
