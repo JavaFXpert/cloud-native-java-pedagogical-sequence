@@ -4,6 +4,42 @@ outline that expresses a pedagogical sequence for Cloud-Native Java, including S
 == Spring foundational concepts
 === Dependency injection
 == Spring Boot
+=== Groovy scripting a REST service
+[source,groovy]
+.example: hi.groovy
+----
+@RestController
+class GreetingsRestController {
+  @RequestMapping("/hi/{name}")
+  def hi(@PathVariable String name) {
+    [ greeting : "Hi," + name + "!"]
+  }
+}
+----
+.Running example from command line
+----
+> spring run hi.groovy
+----
+.Invoking example REST service in browser
+----
+localhost:8080/hi/World
+----
+.JSON returned from REST service
+----
+{
+  greeting: "Hi,World!"
+}
+----
+.Creating an executable JAR from example
+----
+> spring jar hi.jar hi.groovy
+----
+.Running the example executable JAR
+----
+> java -jar hi.jar
+----
+The REST web service code above is short enough to be tweeted!
+
 === Spring Initializer start.spring.io
 Some typical choices *Project metadata* section:
 
@@ -109,41 +145,12 @@ Much of the file consists of dependencies, many of them corresponding to the cho
 </dependencies>
 ----
 
-=== Groovy scripting a REST service
-[source,groovy]
-.example: hi.groovy
-----
-@RestController
-class GreetingsRestController {
-  @RequestMapping("/hi/{name}")
-  def hi(@PathVariable String name) {
-    [ greeting : "Hi," + name + "!"]
-  }
-}
-----
-.Running example from command line
-----
-> spring run hi.groovy
-----
-.Invoking example REST service in browser
-----
-localhost:8080/hi/World
-----
-.JSON returned from REST service
-----
-{
-  greeting: "Hi,World!"
-}
-----
-.Creating an executable JAR from example
-----
-> spring jar hi.jar hi.groovy
-----
-.Running the example executable JAR
-----
-> java -jar hi.jar
-----
-The REST web service code above is short enough to be tweeted!
+=== Annotations commonly used in Spring Boot apps
+Here are some annotations commonly used in Spring Boot apps, along with reasons for being used:
+
+* http://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/autoconfigure/SpringBootApplication.html[@SpringBootApplication] TODO: Describe
+
+* http://docs.spring.io/spring-data/jpa/docs/current/reference/html/[@Entity] A Spring Data JPA annotation that TODO: Describe
 
 == Spring Cloud
 == Cloud Foundry
