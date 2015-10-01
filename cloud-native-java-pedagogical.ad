@@ -56,8 +56,8 @@ Some example choices *Project dependencies* section:
 * *Thymeleaf:* TODO: Describe
 * *Web:* TODO: Describe
 * *Vaadin:* Component-based Web UIs
-* *Rest Repositories:* Convention over configuration-based APIs based on your data access layer
-* *Rest Repositories HAL Browser:* To give information about the Rest repositories
+* *REST Repositories:* Convention over configuration-based APIs based on your data access layer
+* *REST Repositories HAL Browser:* To give information about the REST repositories
 * *JPA:* Object-Relational Mapping
 * *H2:* In-memory embedded database that isn't persistent between app restarts
 * *Actuator:* TODO: Describe
@@ -149,14 +149,89 @@ Much of the file consists of dependencies, many of them corresponding to the cho
 ----
 
 === Spring Data JPA
-==== Define an Entity
-==== Interface with a database
+==== Entity definition
+[source,java]
+.Example entity definition:
+----
+@Entity
+public class Reservation {
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    private String reservationName;
+
+    public Reservation() { // required by JPA?
+    }
+
+    public Reservation(String reservationName) {
+        this.reservationName = reservationName;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getReservationName() {
+        return reservationName;
+    }
+
+    @Override
+    public String toString() {
+        return "Reservation{" +
+            "id=" + id +
+            ", reservationName='" + reservationName + '\'' +
+            '}';
+    }
+}
+----
+
+==== JpaRepository methods
+[source,java]
+.In `JpaRepository`:
+----
+List<T> findAll();
+List<T> findAll(Sort var1);
+List<T> findAll(Iterable<ID> var1);
+<S extends T> List<S> save(Iterable<S> var1);
+void flush();
+<S extends T> S saveAndFlush(S var1);
+void deleteInBatch(Iterable<T> var1);
+void deleteAllInBatch();
+T getOne(ID var1);
+----
+.Inherited from `PagingAndSortingRepository`:
+----
+Iterable<T> findAll(Sort var1);
+Page<T> findAll(Pageable var1);
+----
+.Inherited from `CrudRepository`:
+----
+<S extends T> S save(S var1);
+<S extends T> Iterable<S> save(Iterable<S> var1);
+T findOne(ID var1);
+boolean exists(ID var1);
+Iterable<T> findAll();
+Iterable<T> findAll(Iterable<ID> var1);
+long count();
+void delete(ID var1);
+void delete(T var1);
+void delete(Iterable<? extends T> var1);
+void deleteAll();
+----
+
 ==== Commonly used Annotations specific to Spring Data JPA
 
 * http://docs.spring.io/spring-data/jpa/docs/current/reference/html/[@Entity] A Spring Data JPA annotation that TODO: Describe
 
 * *@Id:* TODO: Provide link or describe
 * *@GeneratedValue:* TODO: Provide link or describe
+
+==== Other Spring Data projects
+Examples include:
+
+* http://projects.spring.io/spring-data-mongodb/[Spring Data MongoDB]
+* http://projects.spring.io/spring-data-rest/[Spring Data REST]
 
 === Commonly used Annotations specific to Spring Boot apps
 
