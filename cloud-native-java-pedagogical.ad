@@ -5,6 +5,13 @@ outline that expresses a pedagogical sequence for Cloud-Native Java, including S
 === Dependency injection
 == Spring Boot
 === Spring Initializer start.spring.io
+Some typical choices Project metadata section:
+
+* *Type:* Maven Project
+* *Packaging:* Jar
+
+TIP: Your choice in *Spring Boot Version* reveals (on the right side of the page) the available features for that version.
+
 === Groovy scripting a REST service
 [[app-listing]]
 [source,groovy]
