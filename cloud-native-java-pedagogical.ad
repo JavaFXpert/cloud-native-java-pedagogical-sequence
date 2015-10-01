@@ -232,6 +232,8 @@ Examples include:
 
 * http://projects.spring.io/spring-data-mongodb/[Spring Data MongoDB]
 * http://projects.spring.io/spring-data-rest/[Spring Data REST]
+* http://projects.spring.io/spring-data-cassandra/[Spring Data Cassandra]
+* http://projects.spring.io/spring-data-neo4j/[Spring Data Neo4J]
 
 === Commonly used Annotations specific to Spring Boot apps
 
