@@ -1,6 +1,6 @@
 = Cloud-Native Java Pedagogical Sequence
 
-Outline that expresses a pedagogical sequence for Cloud-Native Java, including Spring Boot and Spring Cloud.
+_Document that expresses a pedagogical sequence for learning Cloud-Native Java concepts, including Spring Boot, Spring Cloud, and Cloud Foundry_
 
 NOTE: Although there is a lot of detail in the beginning sections, most of this document should list *concepts* with applicable links in a logical teaching progression.  Unlike usual technical documentation, avoid use of gerunds in titles to avoid the tendency to describe *procedures*.
 
@@ -149,6 +149,8 @@ Much of the file consists of dependencies, many of them corresponding to the cho
 ----
 
 === Spring Data JPA
+_One example of the many Spring Data projects_
+
 ==== Entity definition
 [source,java]
 .Example entity definition:
